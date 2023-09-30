@@ -14,6 +14,18 @@ public class S_Usuario {
         this.r_usuario = r_usuario;
     }
 
+    public static M_Usuario validaLogin(String matricula, String senha){
+       matricula = S_Generico.limparNumero(matricula);
+
+        if (S_Generico.campoVazio(matricula)){
+            return null;
+        } else if (S_Generico.campoVazio(senha)) {
+            return null;
+        }
+
+        return r_usuario.buscarUsuarioPorMatriculaESenha(Long.parseLong(matricula), senha);
+    }
+
     public static String CadastrarUsuario(String nome, String matricula, String Ocupacao, String email) {
         boolean podesalvar = true;
         String mensagem = "";

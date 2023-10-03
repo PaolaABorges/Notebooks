@@ -15,7 +15,7 @@ public class C_Home {
 
         if (session.getAttribute("usuario")!= null) {
 
-            model.addAttribute("nome", session.getAttribute("usuario"));
+            model.addAttribute("usuario", session.getAttribute("usuario"));
             return "Home/home";
         }
             return "redirect:/";

@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class C_Login {
     @GetMapping("/")
-    public String getLogin() {
-        return "Login/login";
+    public String getLogin(HttpSession session) {
+        if (session.getAttribute("usuario") != null) {
+            return "redirect:/Home";
+
+        } else {
+            return "Login/login";
+        }
     }
 
     @PostMapping("/login")
@@ -21,12 +26,13 @@ public class C_Login {
                                @RequestParam("senha") String senha,
                                HttpSession session) {
 
-
         session.setAttribute("usuario", S_Usuario.validaLogin(matricula, senha));
-        if (session.getAttribute("usuario") != null){
-            return true;
-        }
-        return false;
+        return session.getAttribute("usuario") != null;
 
+    }
+    @GetMapping ("/logout")
+    public String logout(HttpSession session){
+        session.setAttribute("usuario", null);
+        return "redirect:/";
     }
 }

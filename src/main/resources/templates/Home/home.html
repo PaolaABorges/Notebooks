@@ -15,12 +15,12 @@
             crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>Title</title>
+    <title>HOME</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Fiep</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,8 +29,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li th:if="${nome.Ocupacao == 1}" class="nav-item">
-                    <a class="nav-link" href="#">Cadastro de Notebooks</a>
+                <li th:if="${usuario.Ocupacao == 1}" class="nav-item">
+                    <a class="nav-link" href="/cadastro/notebook">Cadastro de Notebooks</a>
                 </li>
 <!--                <li class="nav-item dropdown">-->
 <!--                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
@@ -50,6 +50,7 @@
             <h4 th:text="${'Bem Vindo(a): ' + usuario.nome}" style="color: #ffffff; ">
 
             </h4>
+            <a href="/logout" class="btn btn-danger text-end">Logout</a>
         </div>
     </div>
 </nav>

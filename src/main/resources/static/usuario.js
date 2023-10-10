@@ -1,5 +1,3 @@
-$("#enviar").click(enviaCadastroUsuario);
-
 function enviaCadastroUsuario() {
     let nome = $("#nome").val();
     let matricula = $("#Matricula").val();

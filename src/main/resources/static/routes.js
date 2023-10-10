@@ -1,13 +1,22 @@
-function controleDeRotasGet(url){
+function controleDeRotas(url){
 switch (url){
 case "/logout":
 gerarSwal(url);
 break;
-case: "/cadastro/notebooks";
+case "/cadastro/notebook":
 //Renderizar tela
+$.get(url, function(data){
+    $('#mainContainer').html(data);
 //Definir as açoes dos componentes
  $("#enviar").click(enviaCadastroNotebook);
- default:
-
+});
+break;
+case "/cadastro":
+$.get(url, function(data){
+    $('#mainContainer').html(data);
+//Definir as açoes dos componentes
+$("#enviar").click(enviaCadastroUsuario);
+});
+break;
 }
 }

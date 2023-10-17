@@ -14,7 +14,7 @@ function gerarSwal(urlSucesso){
         cancelButton: 'btn btn-danger ms-2'
       },
       buttonsStyling: false
-    });
+    })
 
     swalWithBootstrapButtons.fire({
       title: 'Sair?',
@@ -28,15 +28,5 @@ function gerarSwal(urlSucesso){
         if (result.isConfirmed) {
             window.location.href=urlSucesso;
         }
-    });
-}
-function alertaSucesso(mensagem){
-    Swal.fire({
-        position: 'top-end',
-        toast: true,
-        icon: 'success',
-        title: mensagem,
-        showConfirmButton: false,
-        timer: 2000
     });
 }

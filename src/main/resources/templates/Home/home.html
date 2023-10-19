@@ -28,7 +28,7 @@
     <script src="home.js" defer></script>
     <script src="routes.js" ></script>
     <script th:if="${usuario.Ocupacao == 1 }" src="notebook.js" ></script>
-    <script th:if="${usuario.Ocupacao == 1 }" src="usuario.js" ></script>
+    <script src="usuario.js" defer ></script>
     <title>HOME</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
                 <li th:if="${usuario.Ocupacao == 1}" class="nav-item">
                     <a id="cadUsuario" class="nav-link" href="/cadastro">Cadastro de Usuario</a>
                 </li>
-                <li th:if="${usuario.Ocupacao == 1}" class="nav-item">
+                <li class="nav-item">
                     <a id="editUsuario" class="nav-link" href="/edit/usuario">Editar Perfil</a>
                 </li>
 <!--                <li class="nav-item dropdown">-->

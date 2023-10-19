@@ -21,6 +21,7 @@ gerarSwal(url);
      case "/edit/usuario":
         $.get(url, function(data){
         $('#mainContainer').html(data);
+        $('#enviar').click(salvarEditUsuario);
         });
         break;
           default:

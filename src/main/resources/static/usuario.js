@@ -15,7 +15,7 @@ function enviaCadastroUsuario() {
         },
         success: function (data) {
             alert(data);
-            $("#BoasVindas").text("Bem Vindo" + nome + "!");
+
         },
         error: function () {
             alert("Deu Ruim!");
@@ -48,6 +48,7 @@ function enviaCadastroUsuario() {
      success: function(data){
          if(data.sucesso){
             alert("ok: " + data.mensagem);
+             $("#BoasVindas").text("Bem Vindo" + nome + "!");
          }else{
      alert("error: " + data.mansagem);
      }

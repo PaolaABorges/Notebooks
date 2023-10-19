@@ -15,6 +15,7 @@ function enviaCadastroUsuario() {
         },
         success: function (data) {
             alert(data);
+            $("#BoasVindas").text("Bem Vindo" + nome + "!");
         },
         error: function () {
             alert("Deu Ruim!");
